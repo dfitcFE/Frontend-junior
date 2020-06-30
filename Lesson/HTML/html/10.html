@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+
+<body>
+	<span>用户名：</span>
+	<input type="text" name="" id="user" value="mujian" onfocus="handleFocus()" onblur="handleBlur()">
+	<hr/>
+	<span>密码：</span>
+	<input type="password" name="">
+	<hr/>
+	
+	<h4>喜欢的水果：</h4>
+	<input type="radio" name="fruit">apple
+	<input type="radio" name="fruit">kiwi
+	
+	<hr />
+	<h4>喜欢的蔬菜：</h4>
+	<input type="checkbox" name="veg" value="辣椒">辣椒
+	<input type="checkbox" name="veg" value="洋葱">洋葱
+	<hr />
+	<input type="button" name="" value="提交" onclick="handleClick()">
+	<select id="car">
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="opel">Opel</option>
+	  <option value="audi">Audi</option>
+	</select>
+ 	<input type="button" value="click me" onclick="handleClick()"> 
+ 	<button><b>click me</b></button>
+	<script>
+		function handleClick() {
+			// var car = document.getElementById("car")
+			// console.log(car.selectedIndex)
+			// console.log(car.options[car.selectedIndex].value)
+			var userValue = document.getElementById("user").value
+			console.log(userValue)
+			var veg = document.getElementsByName("veg")
+			for(var i = 0;i < veg.length; i++){
+				if(veg[i].checked){
+					console.log(veg[i].value)
+				}
+			}
+		}
+		function handleFocus() {
+			console.log("focus")
+		}
+		function handleBlur() {
+			console.log("blur")
+		}
+	</script>
+	<!-- <span>日期：</span><input type="date">
+	<hr />
+	<span>日期时间：</span><input type="datetime-local">
+	<hr />
+	<span></span><input type="time">
+	<hr />
+	<span>number</span><input type="number">
+	<hr/>
+	<input type="text" value="" readonly="readonly">
+	<input type="text" value="" disabled="disabled"> -->
+	<!-- <script type="text/javascript">
+		function handleClick() {
+
+		}
+	</script> -->
+</body>
+</html>
