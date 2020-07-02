@@ -8,6 +8,7 @@
 		border: 1px solid black;
 		height: 200px;
 		width: 600px;
+		display: inline-block;
 	}
 	.link-wrapper{
 		width: 230px;
@@ -21,11 +22,14 @@
 </head>
 
 <body>
-	<a href="" onclick="handleClick()">跳转到16.html的第6章节</a>
+	<div>
+		<div class="wrapper">div1</div><br/>
+		<div class="wrapper">div2</div>
+	</div>
 	
 	<script type="text/javascript">
 		function handleClick() {
-			window.open("16.html#title6",'self')
+			
 		}	
 	</script>
 </body>
