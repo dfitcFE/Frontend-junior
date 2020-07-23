@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>css_selector</title>
+	<style>
+		h4 {
+			color: green;
+		}
+		.step01_class {
+			height: 30px;
+			width: 30px;
+			background-color: red;
+			display: inline-block;
+		}
+		#step01_id {
+			height: 30px;
+			width: 30px;
+			background-color: blue;
+			display: inline-block;
+		}
+		.step02_class span {
+			color: orange;
+		}
+		.step02_class ul #step02_id {
+			color: blue;
+		}
+		.step03_class > span {
+			color: green;
+		}
+		.step04_class ~ span {
+			color: red;
+		}
+		.step05_class + span {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h4>类选择器（标签名称，id，class）</h4>
+	<div class="step01_class"></div>
+	<div id="step01_id"></div>
+	<hr/>
+	<h3>后代选择器（两个类选择器之间，用空格拼接）</h3>
+	<div class="step02_class">
+		<span>step02_span1</span>
+		<div>
+			<span>step02_span2</span>
+		</div>
+		<ul>
+			<li id="step02_id">选项1</li>
+			<li>选项2</li>
+		</ul>
+	</div>
+	<hr/>
+	<h3>子选择器（两个类选择器之间，用" > "拼接）</h3>
+	<div class="step03_class">
+		<span>step03_span1</span>
+		<div>
+			<span>step03_span2</span>
+		</div>
+		<span>step03_span3</span>
+	</div>
+	<hr/>
+	<span>step04_span1</span>
+	<h3 class="step04_class">同辈选择器（两个类选择器之间，用" ~ "拼接）</h3>
+	<span>step04_span3</span>
+	<div>
+		<span>step04_span4</span>
+	</div>
+	<span>step04_span5</span>
+	<hr/>
+	<div>
+		<span>step05_span1</span>
+		<h3 class="step05_class">一般同辈选择器（两个类选择器之间，用" + "拼接）</h3>
+		<span>step05_span2</span><br/>
+		<span>step05_span3</span>
+		<div>
+			<span>step05_span4</span>
+		</div>
+		<span>step05_span5</span>
+	</div>
+	<hr/>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.border-config01 {
+			height: 100px;
+			width: 100px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: rgb(255, 0, 0);
+		}
+		.border-config02 {
+			height: 100px;
+			width: 100px;
+			border: solid 1px rgb(255, 0, 0);
+		}
+		.text2 {
+			height: 32px;
+			width: 240px;
+			border-right-width: 0px;
+			font-size: 1.5em;
+			border-radius: 0.6em 0 0 0.6em;
+			margin-right:0px;
+			
+		}
+		.btn2 {
+			height: 40px;
+			width: 60px;
+			font-size: 1em;
+			margin-left:-3px;
+			border-left-width: 0px;
+			cursor: pointer;
+			background-color: #ddd;
+			letter-spacing:0.1em;
+			background-color: #3245aa;
+			border-color: #0045aa;
+			border-radius: 0 0.6em 0.6em 0;
+			color: #fff;
+		}
+		.bginput {
+			display: none;
+			height: 300px;
+			width: 600px;
+			margin-top:20px;
+			background-image: url(../img/logo.png), url(../img/stars.jpg);
+			background-repeat: no-repeat no-repeat;
+			background-position: 50% 18%, 0% 0%;
+			background-size: 10% 20%, 100% 100%;
+		}
+		.wrapper {
+			position: relative;
+			top: 35%;
+			left: 25%;
+		}
+		.borderRadius {
+			height: 200px;
+			width: 200px;
+			border: 1px solid;
+			border-radius: 16px;
+			/*border-radius: 16px 16px 16px 16px;*/
+		}
+	</style>
+</head>
+<body>
+	<span>border-style: solid; border-width: 1px; border-color: rgb(255, 0, 0);</span>
+	<div class="border-config01"></div><hr/>
+	<span>border: solid 1px rgb(255, 0, 0)</span>
+	<div class="border-config02"></div><hr/>
+	<span>border: 1px solid; border-radius: 16px;</span>
+	<div class="borderRadius">
+		
+	</div>
+	<div class="bginput">
+		<div class="wrapper">
+			<input class="text2" type="text" />
+			<button class="btn2">点击</button>
+		</div>
+	</div>
+</body>
+</html>

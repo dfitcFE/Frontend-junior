@@ -1,0 +1,6 @@
+.outerClass {
+	border: 1px solid #f00;
+	color: orange;
+	height: 100px !important;
+	width: 100px;
+}

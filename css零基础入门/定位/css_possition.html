@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.fixDiv {
+			position: fixed;
+			left: 300px;
+			height: 100px;
+			width: 100px;
+			border: 1px solid;
+		}
+		.staticDiv {
+			left: 20px;
+			height: 100px;
+			width: 100px;
+			border: 1px solid;
+		}
+		.relativeDiv {
+			position: relative;
+			left: 20px;
+			height: 200px;
+			width: 100px;
+			border: 1px solid;
+		}
+		.absoluteDiv {
+			position: absolute;
+			
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			border: 1px solid;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="fixDiv">
+			固定定位
+	</div>
+	<h3>静态定位（默认）</h3>
+	<div class="staticDiv">
+		
+	</div>
+	<h3>相对定位</h3>
+	<div class="relativeDiv">
+		
+	</div>
+	<h3>绝对定位（默认）</h3>
+	<div style="position:relative;">
+		<div class="absoluteDiv">
+	</div>
+	<div class="relativeDiv">
+		
+	</div>
+	</div>
+	<div style="margin-top:600px;visibility:hidden" >
+		<a target="_blank" href="../练习/css_example_t.html">查看</a>
+	</div>
+</body>
+</html>

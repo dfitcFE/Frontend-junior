@@ -1,0 +1,563 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		html,body{
+			height:100%;
+		}
+		body{
+			background-color:#eee;
+		}
+		.menu {
+			width:100%;
+			position: fixed;
+			top:0px;
+			/*
+			background-image: url(../img/stars.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			*/
+			background-color: white;
+		}
+		.menu .framer > ul {
+			list-style-type: none;
+			margin：20px 200px;
+			display: inline-block;
+		}
+		.menu .framer > ul > li {
+			/*position:relative;*/
+			color: black;
+			display: inline-block;
+			vertical-align:center;
+			cursor: pointer;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.menu .framer > ul > li:hover {
+			color: blue;
+		}
+		.search {
+			border-radius: 16px;
+			margin-left: 250px;
+			width: 150px
+		}
+		.search:focus {
+			transition: width 1s;
+			width: 200px;
+		}
+		.framer {
+			padding-left: 100px;
+		}
+		#m1:hover .subMenu1{
+			display: block;
+		}
+		#m2:hover .subMenu1{
+			display: block;
+		}
+		#m3:hover .subMenu1{
+			display: block;
+		}
+		#m4:hover .subMenu1{
+			display: block;
+		}
+		#m5:hover .subMenu1{
+			display: block;
+		}
+		#m6:hover .subMenu1{
+			display: block;
+		}
+		.subMenu1 {
+			position: absolute;
+			/*top:100%;
+			width: 100%;*/
+			background-color: #fff;
+			display: none;
+		}
+		.subMenu1 > ul > li {
+			color: black;
+			margin:4px 0px;
+		}
+		.subMenu1 > ul > li:hover {
+			background-color: #00d;
+			color: #fff;
+		}
+		.contain01 {
+			margin-top: 90.8px;
+			height:70%;
+			vertical-align: top;
+		}
+		.contain02 {
+			height: 50%;
+		}
+		.contain03 {
+			height: 20%;
+			background-color: #333;
+		}
+		.contain01_main{
+			height:90%;
+			width: 55%; 
+			display:inline-block; 
+			border:1px solid;
+			margin-left:2%;
+			margin-top:2%; 
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/03.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%
+		}
+		.contain01_sub{
+			height:90%;
+			width: 37%;
+			display:inline-block;
+			border:0px solid;
+			margin-left:2%;
+			margin-top:2%;
+		}
+		.contain01_sub01 {
+			height:45%;
+			width: 45%;
+			float:left;
+			border:1px solid;
+			margin-left:1%;
+			margin-top:0.5%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s15.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%
+		}
+		.contain01_sub02 {
+			height:45%;
+			width: 45%;
+			float:right;
+			border:1px solid;
+			margin-top:0.5%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/02.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%
+		}
+		.contain01_sub03 {
+			height:45%;
+			width: 45%;
+			float:left;
+			border:1px solid;
+			margin-left:1%;
+			margin-top:7%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/04.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%
+		}
+		.contain01_sub04 {
+			height:45%;
+			width: 45%;
+			float:right; 
+			border:1px solid;
+			margin-top:7%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/gezi.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%
+		}
+		.contain02_main {
+			height:100%; 
+			width: 95%; 
+			border:0px solid;
+			margin-left:2%;
+		}
+		.contain02_main01 {
+			height:30%; 
+			width:31%; 
+			border:1px solid; 
+			float:left;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s12.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main02 {
+			height:30%; 
+			width:31%; 
+			border:1px solid;
+			float:left; 
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s3.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main03 {
+			height:30%;
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s4.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main04 {
+			height:30%;
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-top:1%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s6.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main05 {
+			height:30%;
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-top:1%;
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s7.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main06 {
+			height:30%;
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-top:1%;
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s8.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main07 {
+			height:30%; 
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-top:1%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/09.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main08 {
+			height:30%; 
+			width:31%; 
+			border:1px solid; 
+			float:left; 
+			margin-top:1%;
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s10.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.contain02_main09 {
+			height:30%;
+			width:31%;
+			border:1px solid;
+			float:left;
+			margin-top:1%;
+			margin-left:3%;
+			box-shadow: 0.1em 0.1em 0.1em 0.1em;
+			background-image: url(../img/s11.jpg);
+			background-repeat: no-repeat;
+			background-position: 99% 99%;
+			background-size: 40% 95%;
+			background-color: #fff;
+		}
+		.pointerClass {
+			cursor:pointer;
+		}
+		.pointerClass:hover {
+			box-shadow: 0.2em 0.3em 0.3em 0.2em;
+		}
+		.wenzi {
+			height: 100%; 
+			width: 0%; 
+			background-color:rgba(255,255,255,0.5);
+			position: basolute; 
+			top: 0px; 
+			left:0px;
+			display:none;
+		}
+		.pointerClass:hover .wenzi {
+			width: 100%; 
+			transition: width 1s;
+			-webkit-transition: width 1s;
+		}
+		.newMsgDiv2 {
+			height: 63%;
+			margin-left:2%;
+			margin-right:3.5%;
+			margin-top:2%;
+			border: solid 1px;
+			background-color: #fff;
+		}
+		.newMsgDiv {
+			height: 84%;
+			margin-left:2%;
+			margin-right:3.5%;
+			margin-top:2%;
+			border: solid 1px;
+			background-color: #fff;
+		}
+
+		.newMsgDivImg {
+			height: 50%;
+			width: 30%;
+			float: right;
+			margin-right:3%;
+			margin-top: 4%;
+		}
+		.newMsgDivText {
+			margin:0% 0% 1% 2%;
+			width: 63%;
+			display: inline-block;
+		}
+		.newMsgDivText p {
+			text-align:justify;
+			text-indent: 2em;
+		}
+		.newMsgDivText h3::before {
+			content: "";
+			display: inline-block;
+			height: 25px;
+			width: 25px;
+			vertical-align:bottom;
+			background: url(../img/s1.jpg) no-repeat;
+			background-size: 100%;
+		}
+		.tableDemo,th,td {
+			border: 1px solid;
+			box-sizing: border-box;
+			border-collapse: collapse;
+		}
+		th,td {
+			text-align: center;
+		}
+		.tableDemo {
+			position: relative;	
+			top: 0%;
+			left: 0%;
+			height: 90%;
+			width: 100%;
+			border-left-width: 0px;
+			border-right-width: 0px;
+		}
+		th {
+			background-color: #34dd12;
+			color: white;
+		}
+		td {
+			background-color: #eee;
+		}
+		.tableDemo tr:nth-child(odd) td {
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div style="width:100%; height:100%; border:0px solid;">
+		<div class="menu" style="border-bottom-style: solid; border-bottom-width: 1px;">
+			<div class="header" style="background-color:black; height: 30px; width: 100%;"></div>
+			<div class="framer">
+				<ul>
+					<li id="m1">选项1
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding:4px 2px;">
+								<li>子选项11</li>
+								<li>子选项12</li>
+								<li>子选项13</li>
+							</ul>
+						</div>
+					</li><span style="color:black">|</span>
+					<li id="m2">选项2
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding-left:0px;">
+								<li>子选项21</li>
+								<li>子选项22</li>
+								<li>子选项23</li>
+							</ul>
+						</div>
+					</li><span style="color:black">|</span>
+					<li id="m3">选项3
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding-left:0px;">
+								<li>子选项31</li>
+								<li>子选项32</li>
+								<li>子选项33</li>
+							</ul>
+						</div>
+					</li><span style="color:black">|</span>
+					<li id="m4">选项4
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding-left:0px;">
+								<li>子选项41</li>
+								<li>子选项42</li>
+								<li>子选项43</li>
+							</ul>
+						</div>
+					</li><span style="color:black">|</span>
+					<li id="m5">选项5
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding-left:0px;">
+								<li>子选项51</li>
+								<li>子选项52</li>
+								<li>子选项53</li>
+							</ul>
+						</div>
+					</li><span style="color:black">|</span>
+					<li id="m6">选项6
+						<div class="subMenu1">
+							<ul style="list-style-type: none; margin: 0px; border: 1px solid;padding-left:0px;">
+								<li>子选项61</li>
+								<li>子选项62</li>
+								<li>子选项63</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<input class="search" type="text" />
+			</div>
+		</div>
+		<div class="contain01">
+			<div class="contain01_main pointerClass">
+				<div class= "wenzi"></div>
+			</div>
+			<div class="contain01_sub">
+				<div class="contain01_sub01 pointerClass"></div>
+				<div class="contain01_sub02 pointerClass"></div>
+				<div class="contain01_sub03 pointerClass"></div>
+				<div class="contain01_sub04 pointerClass"></div>
+			</div>
+		</div>
+		<style>
+			.moreMsg {
+				position: relative; 
+				left:81%; 
+				display:inline-block;
+				cursor: pointer;
+			}
+			.moreMsg:hover {
+				color: blue;
+			}
+		</style>
+		<div>
+			<h2 style="margin-left: 2%;display:inline-block;">本周风景速览</h2>
+			<span class="moreMsg">更多</span>
+		</div>
+		<div class="contain02">
+			<div class="contain02_main" style="">
+				<div class="contain02_main01 pointerClass"><h3 style="margin-left:10%;">海南景色</h3></div>
+				<div class="contain02_main02 pointerClass"><h3 style="margin-left:10%;">云南景色</h3></div>
+				<div class="contain02_main03 pointerClass"><h3 style="margin-left:10%;">上海景色</h3></div>
+				<div class="contain02_main04 pointerClass"><h3 style="margin-left:10%;">北京景色</h3></div>
+				<div class="contain02_main05 pointerClass"><h3 style="margin-left:10%;">广州景色</h3></div>
+				<div class="contain02_main06 pointerClass"><h3 style="margin-left:10%;">美国景色</h3></div>
+				<div class="contain02_main07 pointerClass"><h3 style="margin-left:10%;">深圳景色</h3></div>
+				<div class="contain02_main08 pointerClass"><h3 style="margin-left:10%;">吉林景色</h3></div>
+				<div class="contain02_main09 pointerClass"><h3 style="margin-left:10%;">大连景色</h3></div>
+			</div>
+		</div>
+		<div class="newMsgDiv">
+			<h3 style="margin:1% 0% 1% 0%; padding-left: 2%; color: #fe5;background-color: gray;">历史上的今天</h3>
+			<img class="newMsgDivImg" src="../img/atom.jpg" alt="图片丢失">
+			<div class="newMsgDivText">
+				<h3>代号596</h3>
+				<p>54年前的今天，1964年10月16日下午3时，中国在西部地区成功地爆炸了第一颗原子弹，继美国、苏联、英国、法国之后，成为世界第五个拥有核武装的国家。</p>
+				<p>1964年10月16日，我国第一颗原子弹成功爆炸。从此，中国步入了拥有核武器国家的行列，我们不再惧怕任何大国的核威慑。这的确是一件让中国人扬眉吐气、欢天喜地的大事。但是，你知道原子弹研制过程中的那些艰辛吗？比如，这颗原子弹的代号叫“596”，你知道这个代号的来历吗？说起来，这里面还藏着一个屈辱的故事。</p>
+				<p>话说，1957年，中国和苏联签订了国防新技术协定，其中有一条，就是苏联帮助我国发展核武器。但到了1959年6月20日，苏联方面突然通知中国，停止向我国提供研制原子弹的相关技术资料。很快，苏联人又把派来的专家全部撤回。当时的苏联领导人赫鲁晓夫还宣称，没了苏联人的帮助，中国人永远研制不出原子弹。赫鲁晓夫为什么突然翻脸呢?有两个原因。第一个原因是，1958年，在大国沙文主义的驱使下，赫鲁晓夫向毛主席提出，苏联想要在中国建立长波电台和联合舰队。把民族独立看得异常重要的毛主席，当然拒绝了赫鲁晓夫的无理要求。赫鲁晓夫因此对中国不满。第二个原因是，当时的赫鲁晓夫正积极向美国人靠拢，希望与美国合作，两个大国一起控制整个世界。为了讨好美国，赫鲁晓夫就出卖了中国的利益。对此，毛主席曾作诗讽刺道：“西海如今出圣人，涂脂抹粉上豪门”。这里说的“圣人”，揶揄的就是赫鲁晓夫，“豪门”，指的则是美国。赫鲁晓夫的嘴脸，把中国人彻底惹怒了，不蒸馒头争口气，我们一定要自己研制出原子弹。陈毅元帅曾经说过，中国人就是把裤子当了，也要把原子弹搞出来。为了铭记苏联人撕毁协定的日子——1959年6月20日，我国第一颗原子弹的代号就被确定为“596”。经过科学家们的艰辛努力，我国终于成功研制出了原子弹。巧合的是，就在我国第一颗原子弹成功爆炸的前几天，赫鲁晓夫灰溜溜地下台了。</p>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+		<div class="newMsgDiv2">
+			<h3 style="margin:1% 0% 0.7% 0%; padding-left: 2%; color: #fe5;background-color: gray;">体育彩票</h3>
+			<table class="tableDemo">
+				<th>类型</th>
+				<th>期号</th>
+				<th>开奖时间</th>
+				<th>开奖号码</th>
+				<th>滚存</th>
+				<th>开奖日</th>
+				<tr>
+					<td>超级大乐透</td>
+					<td>20058期</td>
+					<td>2020-07-04</td>
+					<td>01 15 19 26 27 05 10</td>
+					<td>801,073,309元</td>
+					<td>一 三 六</td>
+				</tr>
+				<tr>
+					<td>排列3</td>
+					<td>20136期</td>
+					<td>2020-07-04</td>
+					<td>5 5 2</td>
+					<td>0元</td>
+					<td>每日</td>
+				</tr>
+				<tr>
+					<td>排列5</td>
+					<td>20136期</td>
+					<td>2020-07-04</td>
+					<td>5 5 2 8 7</td>
+					<td>0元</td>
+					<td>每日</td>
+				</tr>
+				<tr>
+					<td>7星彩</td>
+					<td>20058期</td>
+					<td>2020-07-03</td>
+					<td>5 3 3 8 0 1 8</td>
+					<td>3,580,592元</td>
+					<td>二 五 日</td>
+				</tr>
+				<tr>
+					<td>胜负彩(任九)</td>
+					<td>20010期</td>
+					<td>2020-07-02</td>
+					<td>0 0 3 3 0 0 3 0 3 0 3 1 0 0</td>
+					<td>0元</td>
+					<td>不定期</td>
+				</tr>
+				<tr>
+					<td>进球彩</td>
+					<td>20010期</td>
+					<td>2020-07-02</td>
+					<td>1 2 3 0 2 2 0 2</td>
+					<td>0元</td>
+					<td>不定期</td>
+				</tr>
+				<tr>
+					<td>半全场</td>
+					<td>20010期</td>
+					<td>2020-07-02</td>
+					<td>0 0 3 3 3 0 3 3 1 1 0 0</td>
+					<td>0元</td>
+					<td>不定期</td>
+				</tr>
+			</table>
+		</div>
+		<div class="contain03" style="margin-top:1%"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.displayCss {
+			
+		}
+		.baseBlock {
+			height: 100px;
+			width: 100px;
+			border: 1px solid;
+		}
+		.displayCss .no1 {
+			border: 1px solid;
+		}
+		.displayCss .no1:hover ~ .no2{
+			display: none;
+		}
+		.displayCss .no2 {
+			background-color: red;
+		}
+		.displayCss .no3 {
+			background-color: green;
+		}
+		.visibilityCss .no1 {
+			border: 1px solid;
+		}
+		.visibilityCss .no1:hover ~ .no2{
+			visibility: hidden;
+		}
+		.visibilityCss .no2 {
+			background-color: red;
+		}
+		.visibilityCss .no3 {
+			background-color: green;
+		}
+		.inlineDiv {
+			border: 1px solid;
+			display: inline;
+			height: 100px;
+			width: 100px;
+		}
+		.inlineDivBlock {
+			border: 1px solid;
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h3>display</h3>
+	<div class="displayCss">
+		<span class="no1">悬停改变红色块的显示状态——display:none</span></br>
+		<div class="baseBlock no2"></div>
+		<div class="baseBlock no3"></div>
+	</div>
+	<h3>visibility</h3>
+	<div class="visibilityCss">
+		<span class="no1">悬停改变红色块的可见状态——visibility:hidden</span></br>
+		<div class="baseBlock no2"></div>
+		<div class="baseBlock no3"></div>
+	</div><hr/>
+	<h3>display 改变显示状态——display:block</h3>
+	<span style="border: 1px solid; display: block">我是span</span>
+	<h3>display 改变显示状态——display:inline</h3>
+	<div style="border: 1px solid; display: inline">我是div</div>
+	<h3>display 改变显示状态——display:inline 和 inline-block 的区别</h3>
+	<div class="inlineDiv">inline</div></br>
+	<div class="inlineDivBlock">inline-block</div>
+</body>
+</html>

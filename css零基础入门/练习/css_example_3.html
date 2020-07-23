@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.demoDiv1 {
+			background-image: url('../img/s7.jpg');
+		}
+		.demoDiv2 {
+			background-image: url('../img/s8.jpg');
+		}
+		.demoDiv3 {
+			background-image: url('../img/s3.jpg');
+		}
+		.demoDiv4 {
+			background-image: url('../img/s4.jpg');
+		}
+		.normalConfig {
+			height: 100px;
+			width: 100px;
+			border: 1px solid;
+			margin: 30px 30px;
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			box-sizing: border-box;
+		}
+		.demoShow {
+			position: absolute;
+			top: 10px;
+			left: 150px;
+			margin: 20px 10px;
+			height: 490px;
+			width: 900px;
+			border: 1px solid;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-image: url('../img/s12.jpg');
+		}
+		.demoDiv1:hover ~ .demoShow {
+			background-image: url('../img/s7.jpg');
+		}
+		.demoDiv2:hover ~ .demoShow {
+			background-image: url('../img/s8.jpg');
+		}
+		.demoDiv3:hover ~ .demoShow {
+			background-image: url('../img/s3.jpg');
+		}
+		.demoDiv4:hover ~ .demoShow {
+			background-image: url('../img/s4.jpg');
+		}
+		.demoDiv1:hover {
+			border: 3px solid;
+		}
+		.demoDiv2:hover {
+			border: 3px solid;
+		}
+		.demoDiv3:hover {
+			border: 3px solid;
+		}
+		.demoDiv4:hover {
+			border: 3px solid;
+		}
+		.visibilityDemo {
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<div class="visibilityDemo demoDiv1 normalConfig"></div>
+	<div class="visibilityDemo demoDiv2 normalConfig"></div>
+	<div class="visibilityDemo demoDiv3 normalConfig"></div>
+	<div class="visibilityDemo demoDiv4 normalConfig"></div>
+	<div class="visibilityDemo demoShow"></div>
+</body>
+</html>

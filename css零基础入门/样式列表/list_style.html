@@ -1,0 +1,58 @@
+<DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.blockToLine > li {
+			display: inline-block;
+			list-style-type: none;
+			margin-left: 2em;
+			cursor: pointer;
+		}
+		.blockToLine > li:hover {
+			color: blue;
+		}
+		.menu {
+			position: absolute;
+			display: none;
+			padding-left: 5px;
+		}
+		.menu li {
+			list-style-type: none;
+		}
+		.blockToLine > li:hover .menu {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul class="orgin">
+		<li>选项1</li>
+		<li>选项2</li>
+		<li>选项3</li>
+		<li>选项4</li>
+	</ul>
+	<br/>
+	<ul class="blockToLine">
+		<li>选项1
+			<div>
+				<ul class="menu">
+					<li>子选项1</li>
+					<li>子选项2</li>
+					<li>子选项3</li>
+				</ul>
+			</div>
+		</li>
+		<li>选项2
+			<div>
+				<ul class="menu">
+					<li>子选项1</li>
+					<li>子选项2</li>
+					<li>子选项3</li>
+				</ul>
+			</div>
+		</li>
+		<li>选项3</li>
+		<li>选项4</li>
+	</ul>
+</body>
+</html>

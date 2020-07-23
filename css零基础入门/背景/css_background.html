@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.hexConfig {
+			height: 100px;
+			width: 100px;
+			background-color: #ff00ff;
+		}
+		.colorNameConfig {
+			height: 100px;
+			width: 100px;
+			background-color: green;
+		}
+		.rgbConfig {
+			height: 100px;
+			width: 100px;
+			background-color: rgb(255,255,0);
+		}
+		.rgbaConfig {
+			height: 100px;
+			width: 100px;
+			background-color: rgb(255,255,0,0);
+		}
+		.getImage {
+			height: 300px;
+			width: 300px;
+			background-image: url(../img/logo.png);
+			background-repeat: no-repeat;
+		}
+		.getImageRepeat {
+			height: 500px;
+			width: 500px;
+			background-image: url(../img/logo.png);
+			background-repeat: repeat;
+			/*background-repeat: repeat-x;*/
+			/*background-repeat: repeat-y;*/
+			/*background-repeat: no-repeat;*/
+		}
+		.imagePosition {
+			border: 1px solid #000;
+			height: 300px;
+			width: 700px;
+			background-image: url(../img/logo.png);
+			background-repeat: no-repeat;
+			background-position: 370px 70px;
+		}
+		.unoptic {
+			height: 300px;
+			width: 600px;
+			background-image: url(../img/stars.jpg);
+			background-repeat: no-repeat;
+		}
+		.optic {
+			height: 300px;
+			width: 600px;
+			background-image: url(../img/stars.jpg);
+			background-repeat: no-repeat;
+			opacity: 0.5;
+		}
+		.mutil-bg {
+			height: 300px;
+			width: 600px;
+			background-image: url(../img/logo.png), url(../img/stars.jpg);
+			background-position: right bottom, center center;
+			background-repeat: no-repeat, no-repeat;
+			background-size: 25% 50%, 100% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="bgColor">
+		<h3>十六进制（#ff00ff;）</h3>
+		<div class="hexConfig"></div>
+		<h3>颜色名称（green）</h3>
+		<div class="colorNameConfig"></div>
+		<h3>RGB（rgb(255,255,0)）</h3>
+		<div class="rgbConfig"></div>
+		<h3>RGBA(rgb(255,255,0,0.5)——加上了透明度)</h3>
+		<div class="rgbaConfig"></div>
+	</div>
+	<div class="bgPicture">
+		<h3>图片加载（background-image: url(图片地址)）</h3>
+		<div class="getImage"></div>
+		<h3>图片重复（background-repeat: repeat）</h3>
+		<div class="getImageRepeat"></div>
+		<h3>图片定位（background-position: x方向 y方向）</h3>
+		<div class="imagePosition"></div>
+		<h3>设置透明度（opacity，0到1）</h3>
+		<div class="unoptic"></div>
+		<div class="optic"></div>
+		<h3>多重背景（先设置的背景在上面）</h3>
+		<div class="mutil-bg"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>
+		.outer {
+			border: 1px solid #000;
+			padding: 0px;
+			marign: 0px 0px 0px 0px;
+			height: 100px;
+			width: 100px;
+			vertical-align: top;
+		}
+		.inner01 {
+			height:100%;
+			width: 100%;
+			background-color: orange;
+		}
+		.inner02 {
+			margin-left: 10px; 
+			margin-right: 10px; 
+			padding-left: 25px;
+			padding-right: 2px;
+			border-left-width:4px;
+			border-right-width:4px;
+			height:100px;
+			width: 45px;
+			border-color: #000;
+			border-left-style: solid;
+			border-right-style: solid;
+			background-color: red;
+			color: white;
+		}
+		.inner03 {
+			margin-top: 10px; 
+			margin-bottom: 10px; 
+			padding-top: 25px;
+			padding-bottom: 2px;
+			border-top-width:4px;
+			border-bottom-width:4px;
+			height:45px;
+			width: 100px;
+			border-color: #000;
+			border-top-style: solid;
+			border-bottom-style: solid;
+			background-color: blue;
+			color: white;
+		}
+		.inner04 {
+			height:100px;
+			width: 100px;
+			padding: 6px;
+			background-color: green;
+		}
+		.inner05 {
+			height:100px;
+			width: 100px;
+			padding: 6px;
+			box-sizing: border-box;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<span>框体（宽高100px，边框1px，内、外边距均为0）</span>
+	<div class="outer">
+		<div class="inner01" style="color: white;">文字</div>
+	</div><hr/>
+	<span>宽高均100px，边框、内、外边距均为0</span>
+	<div class="outer">
+		<div class="inner01" style="color: white;">文字</div>
+	</div><hr/>
+	<span>高100px，宽45px，左右边框4px、左右外边距均10px、左内边距25px、右内边距2px</span>
+	<div class="outer">
+		<div class="inner02">文字</div>
+	</div><hr/>
+	<span>高45px，高100px，上下边框4px、上下外边距均10px、上内边距25px、下内边距2px</span>
+	<div class="outer">
+		<div class="inner03">文字</div>
+	</div><hr/>
+	<span>宽高均为100px,内边距均为6px</span>
+	<div class="outer">
+		<div class="inner04"></div>
+	</div><hr/>
+	<span>宽高均为100px,内边距均为6px(box-sizing: border-box)</span>
+	<div class="outer">
+		<div class="inner05"></div>
+	</div>
+</body>
+</html>

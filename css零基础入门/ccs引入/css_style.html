@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="./outerCss.css"></link>
+	<style>
+		.innerClass {
+			border: 1px solid;
+			color:blue;
+			height:50px !important;
+		}
+	</style>
+</head>
+<body>
+	<span>通过link标签载入outerCss.css文件</span>
+	<span>宽高均100px，文字桔色</span>
+	<h3 class="outerClass">外部样式</h3>
+	<span>通过style标签内编写样式</span>
+	<span>高50px，文字蓝色</span>
+	<h3 class="innerClass">内部样式</h3>
+	<span>通过在style属性内编写样式</span>
+	<span>文字绿色</span>
+	<h3 style="color:green;border: 1px solid;">内联样式</h3>
+	<span>通过样式覆盖展示优先级</span>
+	<div class="outerClass innerClass" style="width:200px; background-color:orange">优先级</div>
+</body>
+</html>
