@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>飞创通讯录</title>
+	<style>	
+		html,body {
+			height: 100%;
+		}
+		.main_body {
+			background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594288286976&di=484e4cf4236554e3f6d4e091f023c0b7&imgtype=0&src=http%3A%2F%2Fpic.kekenet.com%2F2015%2F0831%2F89351441003810.png) no-repeat;
+			background-size:100% 100%;
+		}
+		.main_content {
+			position: relative;
+			top:35%;
+			left:25%;
+			/*border: 1px solid;*/
+		    text-align: center; 
+		    position: absolute;
+		}
+
+		.input_common{
+			/*border: 1px solid;*/
+			text-align: left; 
+			border-radius: 5px; 
+			width: 400px;
+			height: 25px;
+		}
+		
+		.search_button {
+			width: 120px; 
+			height: 30px; 
+			border-radius: 8px; 
+			text-align: center;
+		}
+
+		.logo_pic{
+			/*border: 1px solid;*/
+			width: 800px;
+			height: 100px;
+		}
+	</style>
+</head>
+
+<body class="main_body">
+	<div class="main_content">
+		<div class="logo_pic">
+			<img src="http://www.dfitc.com.cn/dfitc/uiFramework/commonResource/image/2019031212273847303.png" alt="logo" />
+		</div>
+		<input class="input_common" type="text" id="key_word" placeholder="请输员工姓名或电话">
+		<button class="search_button">通讯录查询</button>
+	</div>
+</body>
+</html>

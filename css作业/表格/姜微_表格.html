@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		.wrapper {
+			height: 100%;
+			background-color: #ddd;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid;
+			box-sizing: border-box;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			text-align: center;
+		}
+
+		table {
+			position: relative;
+			top: 0%;
+			left: 14%;
+			height: 90%;
+			width: 80%;
+			border-left-width: 0px;
+			border-right-width: 0px;
+		}
+
+		th {
+			height: 10%;
+			background-color: #a6a8a6;
+			color: rgb(20, 19, 19);
+		}
+
+		.tableDemo tbody tr:nth-child(odd) td {
+			background-color: #fff;
+		}
+
+		.uncheck {
+			background-color: rgb(250, 175, 206);
+		}
+
+		.dropdown {
+			position: absolute;
+			display: inline-block;
+			border-style: solid;
+			border-color: #c250a9 #6c6cca;
+			border-right-color: #5d13e7;
+			border-bottom-width: 2px;
+		}
+
+		/* 下拉按钮样式 */
+		.dropbtn {
+			background-color: #57b0da;
+			color: rgb(24, 22, 22);
+			padding: 5px;
+			font-size: 14px;
+			border: none;
+			cursor: pointer;
+			height: 40px;
+			width: 150px;
+		}
+
+		/* 下拉内容 (默认隐藏) */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+		}
+
+		/* 下拉菜单的链接 */
+		.dropdown-content a {
+			color: rgb(82, 207, 245);
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* 鼠标移上去后修改下拉菜单链接颜色 */
+		.dropdown-content a:hover {
+			background-color: #f5b70e;
+		}
+
+		/* 在鼠标移上去后显示下拉菜单 */
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+		.dropdown:hover .dropbtn {
+			background-color: #f175dd;
+		}
+
+		.qry {
+			position: relative;
+			right: 0%;
+			background-color: #e7e7e7;
+			color: black;
+			border-radius: 12px;
+			height: 40px;
+			width: 150px;
+			font-size: 14px;
+			border: none;
+			cursor: pointer;
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+		}
+
+		.qry:hover {
+			background-color: #4CAF50;
+			/* Green */
+			color: white;
+			box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		.lastborder {
+			border: 1px solid white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="dropdown">
+		<button class="dropbtn">品种代码</button>
+		<div class="dropdown-content">
+			<a href="#">a-豆一</a>
+			<a href="#">bb-膠合板</a>
+			<a href="#">b-豆二</a>
+		</div>
+	</div>
+	<div class="wrapper">
+		<table class="tableDemo">
+			<tr>
+				<th>序号</th>
+				<th>品种代码</th>
+				<th>层级费率</th>
+				<th>设置层级费率</th>
+				<th>复核状态</th>
+				<th>未复核类型</th>
+			</tr>
+			<tr class="uncheck">
+				<td>1</td>
+				<td>a</td>
+				<td>400.00</td>
+				<td>500.00</td>
+				<td>未复核</td>
+				<td>修改</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>b</td>
+				<td>2500.00</td>
+				<td></td>
+				<td>已复核</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>bb</td>
+				<td>300.00</td>
+				<td></td>
+				<td>已复核</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td   class="lastborder" colspan="5"></td>
+				<td   class="lastborder"><button class="qry">查询</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

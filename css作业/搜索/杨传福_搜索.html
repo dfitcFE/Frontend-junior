@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>搜一搜</title>
+	<style>	
+		.ibody {
+			border: 1px solid white;
+		}
+		.left_position {
+			position: fixed;
+			left: 30px;
+			display: inline-block;
+		}
+		
+		.right_position {
+			position: fixed;
+			right: 50px;
+			display: inline-block;
+		}
+		
+		.itag {
+			margin: 10px;
+		}
+		
+		.ibutton {
+			width:50px; 
+			height:25px; 
+			background-color:blue; 
+			border-radius:10px; 
+			text-align:center;
+			display: inline-block;
+			
+		}
+		
+		.icenter {
+			margin-top: 100px;
+			text-align: center;
+		}
+		
+		
+		.iinput {
+			margin-right: 0px;
+			padding-right: 0px;
+			width: 500px;
+			height: 35px;
+			border: 2px solid #B0B0B0;
+		}
+		
+		.ibutton2 {
+			padding: 0px;
+			width: 150px; 
+			height: 39px; 
+			background-color: blue; 
+			border-radius: 10px; 
+			text-align: center;
+			
+			font-size: 15px;
+		}
+		
+		.iscore {
+			margin-top: 20px;
+		}
+		
+		.ibottom {
+			margin-top: 50px;
+			text-align: center;
+			
+		}
+		
+		.itable {
+			border-spacing:40px 10px;
+			margin: auto;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="ibody">
+		<div class="itop">
+			<div class="left_position">
+				<a href="http://news.baidu.com/" target="_blank" class="itag">新闻</a>
+				<a href="http://tieba.baidu.com" target="_blank" class="itag">贴吧</a>
+				<a href="http://map.baidu.com/" target="_blank" class="itag">地图</a>
+				<a href="http://xueshu.baidu.com/" target="_blank" class="itag">学术</a>
+			</div>
+			
+			<div class="right_position">
+				<a href="javascript:void(0)" class="itag">设置</a>
+				<button class="ibutton">登录</button>
+			</div>
+		</div>
+		<style>
+			.ibutton2 {
+				color: #eee;
+			}
+		</style>
+		<div class="icenter">
+			<div class="ipic">
+				<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3847543554,529857080&fm=26&gp=0.jpg" width="160px" height="110px" alt="爱我，就来搜我" />
+			</div>
+			<input type="text" id="isou" name="isou" class="iinput">
+			<button class="ibutton2">爱我，就来点我</button>
+			
+			<div class="iscore">
+				<a href="javascript:void(0)" class="itag">闪电估分</a>
+				<a href="javascript:void(0)" class="itag">高考作文</a>
+				<a href="javascript:void(0)" class="itag">高考作文</a>
+				<a href="javascript:void(0)" class="itag">高考大数据</a>
+			</div>
+		</div>
+		
+		<div class="ibottom">
+			
+			<table class="itable">
+				<th colspan="2">搜搜热榜</th>
+				<tr>
+					<td>1 贵州公交坠湖事故已致</td>
+					<td>4 贵州公交坠湖事故已致</td>
+				</tr>
+				<tr>
+					<td>2 贵州公交坠湖事故已致</td>
+					<td>5 贵州公交坠湖事故已致</td>
+				</tr>
+				<tr>
+					<td>3 贵州公交坠湖事故已致</td>
+					<td>6 贵州公交坠湖事故已致</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

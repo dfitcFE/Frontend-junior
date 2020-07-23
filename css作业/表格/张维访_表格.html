@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>成绩 </title>
+    <link href="css/goods.css" rel="stylesheet" type="text/css"> 
+    <style>
+      .sercss{
+          float:right;
+          margin:20px;
+          color:aliceblue;
+        }
+        .table{
+            background-color: azure;
+            margin: 10%; 
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+            width: 200px;
+        }
+ 
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 200px;
+        }
+ 
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+ 
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+
+        body{
+          background-color: azure;
+          background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=360891098,3266915060&fm=15&gp=0.jpg") ;
+        }
+        #serName {
+          color:#4CAF50;
+        }
+        input{
+          outline-style: none;
+          border: 0px;  
+        } 
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        h2{
+          color: white;
+        }
+    </style>
+    <script>
+      function clkbtn() {
+        alert("您没及格！");  
+      }
+    </script>
+</head>
+<body>
+<script charset = "Shift_JIS" src = "http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"> </script>
+  <div style="width:900px; margin: 0 auto;" >
+
+ <h2>成绩查询</h2><div class="sercss">输入搜索内容: <input type="text" id="serName"><input class = "button" type ="button" value="搜索" onclick="clkbtn();" id="clkbtn"/></div>
+
+<table class="table" >  
+       <thead>  
+          <tr>                                                           
+              <th data-field="name" align="center" data-sortable="true">姓名</th>  
+              <th data-field="age" align="center">年龄</th>  
+              <th data-field="sex" align="center">性别</th>  
+              <th data-field="yw" align="center">语文</th>
+              <th data-field="sx" align="center">数学</th>
+              <th data-field="yy" align="center">英语</th>
+              <th data-field="zr" align="center">自然</th>
+          </tr>  
+       </thead>  
+       <tbody>  
+        <tr>                                                           
+          <td>王子一</td>
+          <td>12</td>
+          <td>男</td>
+          <td>59</td>
+          <td>59</td>
+          <td>59</td>
+          <td>79</td>
+      </tr>  
+      <tr>                                                           
+          <td>公主一</td>
+          <td>11</td>
+          <td>男</td>
+          <td>89</td>
+          <td>89</td>
+          <td>89</td>
+          <td>79</td>
+      </tr>  
+      <tr>                                                           
+          <td>王子二</td>
+          <td>13</td>
+          <td>男</td>
+          <td>79</td>
+          <td>79</td>
+          <td>79</td>
+          <td>79</td>
+      </tr> 
+      <tr>                                                           
+        <td>公主二</td>
+        <td>13</td>
+        <td>男</td>
+        <td>79</td>
+        <td>79</td>
+        <td>79</td> 
+        <td>79</td>
+    </tr>  
+    <tr>                                                           
+      <td>王子三</td>
+      <td>13</td>
+      <td>男</td>
+      <td>79</td>
+      <td>79</td>
+      <td>79</td>
+      <td>79</td>
+  </tr>   
+       </tbody>  
+</table>  
+</div>
+
+</body>
+</html>
